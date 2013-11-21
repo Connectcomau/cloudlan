@@ -36,8 +36,12 @@ module.exports = function(grunt) {
         tasks: ['jshint:lib', 'browserify', 'concat:dist']
       },
       templates: {
-        files: 'lib/templates/*hbs',
+        files: 'lib/templates/*.hbs',
         tasks: ['handlebars']
+      },
+      css: {
+        files: 'lib/css/*.styl',
+        tasks: ['stylus']
       }
     },
 		browserify: {
@@ -55,7 +59,14 @@ module.exports = function(grunt) {
 					namespace: 'JST'
 				},
 				files: {
-					'dist/js/templates.js': ['lib/templates/*hbs']
+					'dist/js/templates.js': ['lib/templates/*.hbs']
+				}
+			}
+		},
+		stylus: {
+			compile: {
+				files: {
+					'dist/css/cloudlan.css': ['lib/css/*.styl']
 				}
 			}
 		},
@@ -83,9 +94,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-handlebars');
+	grunt.loadNpmTasks('grunt-contrib-stylus');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'browserify', 'concat:dist', 'uglify:dist', 'handlebars']);
-  grunt.registerTask('compile', ['jshint', 'browserify', 'concat', 'uglify', 'handlebars']);
+  grunt.registerTask('default', ['jshint', 'browserify', 'concat:dist', 'uglify:dist', 'handlebars', 'stylus']);
+  grunt.registerTask('compile', ['jshint', 'browserify', 'concat', 'uglify', 'handlebars', 'stylus']);
 
 };
