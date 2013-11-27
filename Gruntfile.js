@@ -73,7 +73,9 @@ module.exports = function(grunt) {
 		concat: {
 			vendor: {
         src: [
-					'vendor/leaflet-src.js'
+					'vendor/leaflet-src.js',
+					'vendor/jquery-2.0.3.js',
+					'vendor/handlebars.runtime.js'
 				],
 				dest: 'dist/js/vendor.js'
 			},
