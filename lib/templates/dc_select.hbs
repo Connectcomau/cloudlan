@@ -1,0 +1,8 @@
+<div class="dc_select">
+	<select name="dc_select" class="select-block">
+		<option value="-1" selected>Select a DC</option>
+		{{#each dc}}
+		<option value="{{this.[3]}}">{{this.[0]}}</option>
+		{{/each}}
+	</select>
+</div>

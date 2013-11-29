@@ -75,7 +75,9 @@ module.exports = function(grunt) {
         src: [
 					'vendor/leaflet-src.js',
 					'vendor/jquery-2.0.3.js',
-					'vendor/handlebars.runtime.js'
+					'vendor/handlebars.runtime.js',
+					'vendor/bootstrap.min.js',
+					'vendor/bootstrap-select.js'
 				],
 				dest: 'dist/js/vendor.js'
 			},
