@@ -10,7 +10,7 @@
   "undef": true,
   "boss": true,
   "eqnull": true,
-  "predef": ["exports", "L", "_", "$", "JST"],
+  "predef": ["exports", "L", "_", "$", "JST", "Handlebars"],
 	"node": true,
 	"browser": true
 }

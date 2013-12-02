@@ -1,8 +1,19 @@
 <div class="dc_list">
-	{{#each dc}}
-	<div>
-		<div class="dc" data-id="{{this.[3]}}">
-			<i class="fa fa-building-o"></i> {{this.[0]}}
+	{{#each dcs}}
+	<div class="dc" data-id="{{dc.[3]}}">
+		<div class="heading"><i class="fa fa-cloud"></i> {{dc.[0]}}</div>
+		<div class="dc_ports">
+			&nbsp;
+			{{#each ports}}
+				{{#if connected}}
+					<i class="fa fa-square port" data-id="{{id}}"></i>
+				{{else}}
+					<i class="fa fa-square-o port" data-id="{{id}}"></i>
+				{{/if}}
+			{{/each}}
+			{{#unless ports}}
+				No ports.
+			{{/unless}}
 		</div>
 	</div>
 	{{/each}}

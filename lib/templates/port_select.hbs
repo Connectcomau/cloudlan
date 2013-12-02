@@ -1,0 +1,30 @@
+<div class="port_select">
+	<div class="content">
+		<i class="fa fa-square-o"></i> {{selected.[0].dcname}} 
+		<br>
+		{{#if selected.[1]}}
+			<i class="fa fa-square-o"></i> {{selected.[1].dcname}}
+			<br>
+			{{#if existing}}
+				{{speed existing}} Link
+			{{else}}
+				<div class="btn-toolbar">
+					<div class="btn-group">
+						<div class="btn btn-primary link_ports" data-speed="100">100M</div>
+						<div class="btn btn-primary link_ports" data-speed="1000">1G</div>
+						<div class="btn btn-primary link_ports" data-speed="10000">10G</div>
+					</div>
+				</div>
+			{{/if}}
+		{{else}}
+			Select a port to connect to
+		{{/if}}
+	</div>
+	{{#if selected.[1]}}
+		{{#if existing}}
+			<div class="remove_link" data-port="{{selected.[1].id}}">Remove Link</div>
+		{{else}}
+			<div class="add_link">Select speed to Link</div>
+		{{/if}}
+	{{/if}}
+</div>

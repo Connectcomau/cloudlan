@@ -1,6 +1,13 @@
 body{margin:0;padding:0;font-family:'Helvetica'}
 #map{height:100%;width:100%}
 .dc_list{position:absolute;top:100px;left:10px;}
-.dc_list .dc{padding:2px 5px;display:inline-block;cursor:pointer;}
-.dc_list .dc:hover{background-color:#ababab}
-.dc_select{position:absolute;left:50px;top:10px}
+.dc_list .dc{cursor:pointer;background-color:#3498db;margin-bottom:0;border-radius:4px;color:#fff;margin-bottom:20px;}
+.dc_list .dc .heading{padding:10px 20px}
+.dc_list .dc_ports{text-align:right;background-color:#fff;border:3px solid #3498db;border-top:0;padding-right:5px;font-size:20px;}
+.dc_list .dc_ports .port{cursor:pointer;color:#16a085;}
+.dc_list .dc_ports .port.highlight{color:#e74c3c}
+.dc_select{position:absolute;left:10px;top:10px;width:300px}
+.dropdown-toggle{width:320px !important}
+.port_select,.dc_info{position:absolute;top:20%;width:300px;left:50%;margin:0 0 0 -150px;background-color:#fff;border-radius:6px;color:#16a085;border:3px solid #16a085;}
+.port_select .content,.dc_info .content{padding:10px 20px}
+.port_select .add_button,.dc_info .add_button,.port_select .add_link,.dc_info .add_link,.port_select .remove_link,.dc_info .remove_link{background-color:#16a085;text-align:center;padding:4px;color:#fff;cursor:pointer}
